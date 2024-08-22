@@ -6,7 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  username: string = '';
+  password: string = '';
+  message: string = '';
+  constructor() {
 
-  constructor() {}
+  }
+  validateLogin() {
+    if (this.username === 'admin' && this.password === '1234') {
+      this.message = 'Acceso correcto';
+    } else {
+      this.message = 'Acceso incorrecto';
+    }
+  }
 
 }
